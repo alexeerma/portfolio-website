@@ -41,7 +41,7 @@ export function ContactSection() {
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
     
     // Use environment variable for recipient email, fallback to contact section email
-    const recipientEmail = import.meta.env.VITE_CONTACT_EMAIL || 'alex@developer.ee';
+    const recipientEmail = import.meta.env.VITE_CONTACT_EMAIL || 'aleksander.eerma@hotmail.com';
     const recipientName = import.meta.env.VITE_CONTACT_NAME || 'Alex Developer';
 
     const templateParams = {
@@ -138,7 +138,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-foreground dark:text-accent">{t('email')}</div>
-                    <div className="text-muted-foreground">alex@developer.ee</div>
+                    <div className="text-muted-foreground">aleksander.eerma@hotmail.com</div>
                   </div>
                 </div>
 
