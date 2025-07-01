@@ -36,9 +36,10 @@ This is a modern full-stack web application built with React on the frontend and
 - **Contact Messages Table**: Stores form submissions with fields for personal info, project details, and message content
 - **Schema Validation**: Drizzle-Zod integration for runtime validation
 
-### API Endpoints
-- `POST /api/contact`: Submit contact form data
-- `GET /api/contact`: Retrieve contact messages (admin functionality)
+### Email Integration
+- **EmailJS**: Direct frontend email sending without backend
+- **Contact Form**: Sends emails directly to your inbox using EmailJS service
+- **No Database Required**: Completely frontend-based solution
 
 ### Frontend Features
 - **Multi-language Support**: English and Estonian translations
@@ -57,7 +58,7 @@ This is a modern full-stack web application built with React on the frontend and
 ## Data Flow
 
 1. **Contact Form Submission**:
-   - User fills out contact form → Form validation with Zod → API request to `/api/contact` → Database insertion → Success/error feedback
+   - User fills out contact form → Form validation → EmailJS service → Direct email delivery → Success/error feedback
 
 2. **Theme Management**:
    - User toggles theme → Context update → CSS class changes → LocalStorage persistence
@@ -71,13 +72,11 @@ This is a modern full-stack web application built with React on the frontend and
 ## External Dependencies
 
 ### Production Dependencies
-- **@neondatabase/serverless**: Serverless PostgreSQL driver
+- **@emailjs/browser**: Frontend email sending service
 - **@radix-ui/***: Headless UI component primitives
-- **@tanstack/react-query**: Server state management
-- **drizzle-orm**: Type-safe SQL ORM
-- **express**: Node.js web framework
 - **three**: 3D graphics library
 - **zod**: Runtime type validation
+- **react**: Frontend framework with TypeScript
 
 ### Development Dependencies
 - **vite**: Build tool and dev server
@@ -116,6 +115,7 @@ Changelog:
 - July 01, 2025. Removed Twitter icons and enhanced color consistency with green theme
 - July 01, 2025. Created custom select component to resolve runtime errors
 - July 01, 2025. Replaced Download CV button with Contact Me button that scrolls to contact section
+- July 01, 2025. Implemented EmailJS integration for direct email sending without database dependency
 ```
 
 ## User Preferences

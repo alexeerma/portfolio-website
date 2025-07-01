@@ -7,8 +7,7 @@ import { ContactSelect } from "@/components/contact-select";
 import { Label } from "@/components/ui/label";
 import { useLanguage } from "@/hooks/use-language";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
+import emailjs from '@emailjs/browser';
 
 interface ContactForm {
   firstName: string;
@@ -33,11 +32,46 @@ export function ContactSection() {
     message: ""
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactForm) => {
-      return await apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const sendEmail = async (data: ContactForm) => {
+    // EmailJS configuration - you'll need to set up your EmailJS account
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+
+    const templateParams = {
+      from_name: `${data.firstName} ${data.lastName}`,
+      from_email: data.email,
+      company: data.company,
+      project_type: data.projectType,
+      budget_range: data.budgetRange,
+      message: data.message,
+      to_name: 'Alex Developer', // Your name
+    };
+
+    try {
+      const result = await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      return result;
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.projectType || !formData.message) {
+      toast({
+        title: "Error",
+        description: "Please fill in all required fields",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      await sendEmail(formData);
       toast({
         title: "Success",
         description: t('messageSent'),
@@ -51,27 +85,15 @@ export function ContactSection() {
         budgetRange: "",
         message: ""
       });
-    },
-    onError: (error: any) => {
+    } catch (error: any) {
       toast({
         title: "Error",
-        description: error.message || "Failed to send message",
+        description: error.message || "Failed to send message. Please check your EmailJS configuration.",
         variant: "destructive",
       });
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.projectType || !formData.message) {
-      toast({
-        title: "Error",
-        description: "Please fill in all required fields",
-        variant: "destructive",
-      });
-      return;
+    } finally {
+      setIsSubmitting(false);
     }
-    contactMutation.mutate(formData);
   };
 
   const handleInputChange = (field: keyof ContactForm, value: string) => {
@@ -257,10 +279,10 @@ export function ContactSection() {
 
               <Button
                 type="submit"
-                disabled={contactMutation.isPending}
+                disabled={isSubmitting}
                 className="w-full px-8 py-4 bg-primary text-primary-foreground font-semibold hover:bg-primary/80 transform hover:scale-105 transition-all duration-300 animate-glow"
               >
-                {contactMutation.isPending ? "Sending..." : t('sendMessage')}
+                {isSubmitting ? "Sending..." : t('sendMessage')}
                 <Send className="ml-2 h-4 w-4" />
               </Button>
 
