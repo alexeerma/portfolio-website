@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Linkedin, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -143,14 +143,11 @@ export function ContactSection() {
               <div className="mt-8 pt-8 border-t border-border">
                 <h4 className="font-semibold mb-4 text-foreground dark:text-accent">{t('followMe')}</h4>
                 <div className="flex space-x-4">
-                  <Button variant="ghost" size="icon" className="bg-blue-500/20 text-blue-400 hover:bg-blue-500/30">
+                  <Button variant="ghost" size="icon" className="bg-primary/20 text-primary hover:bg-primary/30">
                     <Linkedin className="h-4 w-4" />
                   </Button>
-                  <Button variant="ghost" size="icon" className="bg-gray-500/20 text-gray-400 hover:bg-gray-500/30">
+                  <Button variant="ghost" size="icon" className="bg-primary/20 text-primary hover:bg-primary/30">
                     <Github className="h-4 w-4" />
-                  </Button>
-                  <Button variant="ghost" size="icon" className="bg-blue-400/20 text-blue-400 hover:bg-blue-400/30">
-                    <Twitter className="h-4 w-4" />
                   </Button>
                 </div>
               </div>

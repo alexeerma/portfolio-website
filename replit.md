@@ -111,7 +111,10 @@ This is a modern full-stack web application built with React on the frontend and
 
 ```
 Changelog:
-- July 01, 2025. Initial setup
+- July 01, 2025. Initial setup with portfolio framework
+- July 01, 2025. Fixed contact form dropdown errors and improved light mode visibility
+- July 01, 2025. Removed Twitter icons and enhanced color consistency with green theme
+- July 01, 2025. Created custom select component to resolve runtime errors
 ```
 
 ## User Preferences

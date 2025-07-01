@@ -1,4 +1,4 @@
-import { Linkedin, Github, Twitter } from "lucide-react";
+import { Linkedin, Github } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
 
 export function Footer() {
@@ -20,9 +20,6 @@ export function Footer() {
             </button>
             <button className="text-muted-foreground hover:text-primary transition-colors duration-200">
               <Github className="h-5 w-5" />
-            </button>
-            <button className="text-muted-foreground hover:text-primary transition-colors duration-200">
-              <Twitter className="h-5 w-5" />
             </button>
           </div>
           <div className="border-t border-border pt-8">
