@@ -169,7 +169,7 @@ export function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="firstName" className="text-accent">{t('firstName')} *</Label>
+                  <Label htmlFor="firstName" className="text-foreground dark:text-accent">{t('firstName')} *</Label>
                   <Input
                     id="firstName"
                     value={formData.firstName}
@@ -179,7 +179,7 @@ export function ContactSection() {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="lastName" className="text-accent">{t('lastName')} *</Label>
+                  <Label htmlFor="lastName" className="text-foreground dark:text-accent">{t('lastName')} *</Label>
                   <Input
                     id="lastName"
                     value={formData.lastName}
@@ -191,7 +191,7 @@ export function ContactSection() {
               </div>
 
               <div>
-                <Label htmlFor="email" className="text-accent">{t('email')} *</Label>
+                <Label htmlFor="email" className="text-foreground dark:text-accent">{t('email')} *</Label>
                 <Input
                   id="email"
                   type="email"
@@ -203,7 +203,7 @@ export function ContactSection() {
               </div>
 
               <div>
-                <Label htmlFor="company" className="text-accent">{t('company')}</Label>
+                <Label htmlFor="company" className="text-foreground dark:text-accent">{t('company')}</Label>
                 <Input
                   id="company"
                   value={formData.company}
@@ -213,7 +213,7 @@ export function ContactSection() {
               </div>
 
               <div>
-                <Label className="text-accent">{t('projectType')} *</Label>
+                <Label className="text-foreground dark:text-accent">{t('projectType')} *</Label>
                 <Select value={formData.projectType} onValueChange={(value) => handleInputChange('projectType', value)}>
                   <SelectTrigger className="mt-2">
                     <SelectValue placeholder={t('selectProjectType')} />
@@ -229,7 +229,7 @@ export function ContactSection() {
               </div>
 
               <div>
-                <Label className="text-accent">{t('budgetRange')}</Label>
+                <Label className="text-foreground dark:text-accent">{t('budgetRange')}</Label>
                 <Select value={formData.budgetRange} onValueChange={(value) => handleInputChange('budgetRange', value)}>
                   <SelectTrigger className="mt-2">
                     <SelectValue placeholder={t('selectBudget')} />
@@ -244,7 +244,7 @@ export function ContactSection() {
               </div>
 
               <div>
-                <Label htmlFor="message" className="text-accent">{t('projectDescription')} *</Label>
+                <Label htmlFor="message" className="text-foreground dark:text-accent">{t('projectDescription')} *</Label>
                 <Textarea
                   id="message"
                   value={formData.message}
