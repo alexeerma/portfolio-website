@@ -39,6 +39,10 @@ export function ContactSection() {
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+    
+    // Use environment variable for recipient email, fallback to contact section email
+    const recipientEmail = import.meta.env.VITE_CONTACT_EMAIL || 'alex@developer.ee';
+    const recipientName = import.meta.env.VITE_CONTACT_NAME || 'Alex Developer';
 
     const templateParams = {
       from_name: `${data.firstName} ${data.lastName}`,
@@ -47,7 +51,9 @@ export function ContactSection() {
       project_type: data.projectType,
       budget_range: data.budgetRange,
       message: data.message,
-      to_name: 'Alex Developer', // Your name
+      to_name: recipientName,
+      to_email: recipientEmail,
+      reply_to: data.email, // So you can reply directly to the sender
     };
 
     try {

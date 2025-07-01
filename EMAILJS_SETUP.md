@@ -22,6 +22,8 @@ Your contact form now uses EmailJS to send emails directly from the frontend wit
 2. Click **Create New Template**
 3. Set up your template with these variables:
    ```
+   To Email: {{to_email}}
+   Reply To: {{reply_to}}
    Subject: New Contact Form Submission from {{from_name}}
    
    Hello {{to_name}},
@@ -39,6 +41,7 @@ Your contact form now uses EmailJS to send emails directly from the frontend wit
    
    ---
    Sent from your portfolio website
+   Reply to this email to respond directly to {{from_name}} at {{from_email}}
    ```
 4. Note down your **Template ID**
 
@@ -59,6 +62,10 @@ Your contact form now uses EmailJS to send emails directly from the frontend wit
    VITE_EMAILJS_SERVICE_ID=your_actual_service_id
    VITE_EMAILJS_TEMPLATE_ID=your_actual_template_id  
    VITE_EMAILJS_PUBLIC_KEY=your_actual_public_key
+   
+   # Optional: Override contact email (defaults to alex@developer.ee)
+   VITE_CONTACT_EMAIL=your@email.com
+   VITE_CONTACT_NAME=Your Name
    ```
 
 ## 6. Test the Setup
