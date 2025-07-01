@@ -76,8 +76,8 @@ export function ExperienceSection() {
                     <div className="text-muted-foreground text-sm">{job.company}</div>
                   </div>
                   <div className="md:w-3/4">
-                    <h4 className="text-xl font-bold mb-3 text-accent">{job.title}</h4>
-                    <p className="text-muted-foreground mb-4">{job.description}</p>
+                    <h4 className="text-xl font-bold mb-3 text-foreground dark:text-accent">{job.title}</h4>
+                    <p className="text-foreground dark:text-muted-foreground mb-4">{job.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {job.technologies.map((tech, techIndex) => (
                         <span key={techIndex} className="px-2 py-1 bg-primary/20 text-primary rounded text-xs">
@@ -103,9 +103,9 @@ export function ExperienceSection() {
               <div className="space-y-6">
                 <div className="pb-6 border-b border-border last:border-b-0">
                   <div className="text-primary font-mono text-sm mb-2">2015 - 2019</div>
-                  <h4 className="text-lg font-bold text-accent mb-2">Bachelor's in Computer Science</h4>
-                  <p className="text-muted-foreground text-sm">University of Technology, Estonia</p>
-                  <p className="text-muted-foreground text-sm mt-2">
+                  <h4 className="text-lg font-bold text-foreground dark:text-accent mb-2">Bachelor's in Computer Science</h4>
+                  <p className="text-foreground dark:text-muted-foreground text-sm">University of Technology, Estonia</p>
+                  <p className="text-foreground dark:text-muted-foreground text-sm mt-2">
                     Graduated with honors, specialized in software engineering and web technologies.
                   </p>
                 </div>
@@ -122,8 +122,8 @@ export function ExperienceSection() {
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
                   <div key={index} className="p-4 bg-primary/10 rounded-lg">
-                    <h4 className="font-semibold text-accent mb-1">{cert.title}</h4>
-                    <p className="text-muted-foreground text-sm">{cert.issuer}</p>
+                    <h4 className="font-semibold text-foreground dark:text-accent mb-1">{cert.title}</h4>
+                    <p className="text-foreground dark:text-muted-foreground text-sm">{cert.issuer}</p>
                     <div className="text-primary font-mono text-xs mt-1">{cert.year}</div>
                   </div>
                 ))}

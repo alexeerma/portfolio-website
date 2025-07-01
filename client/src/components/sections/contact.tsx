@@ -109,27 +109,27 @@ export function ContactSection() {
                     <Mail className="text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold text-accent">{t('email')}</div>
+                    <div className="font-semibold text-foreground dark:text-accent">{t('email')}</div>
                     <div className="text-muted-foreground">alex@developer.ee</div>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
-                    <Phone className="text-accent" />
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <Phone className="text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold text-accent">{t('phone')}</div>
+                    <div className="font-semibold text-foreground dark:text-accent">{t('phone')}</div>
                     <div className="text-muted-foreground">+372 5123 4567</div>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                    <MapPin className="text-purple-400" />
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <MapPin className="text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold text-accent">{t('location')}</div>
+                    <div className="font-semibold text-foreground dark:text-accent">{t('location')}</div>
                     <div className="text-muted-foreground">Tallinn, Estonia</div>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export function ContactSection() {
 
               {/* Social Links */}
               <div className="mt-8 pt-8 border-t border-border">
-                <h4 className="font-semibold mb-4 text-accent">{t('followMe')}</h4>
+                <h4 className="font-semibold mb-4 text-foreground dark:text-accent">{t('followMe')}</h4>
                 <div className="flex space-x-4">
                   <Button variant="ghost" size="icon" className="bg-blue-500/20 text-blue-400 hover:bg-blue-500/30">
                     <Linkedin className="h-4 w-4" />

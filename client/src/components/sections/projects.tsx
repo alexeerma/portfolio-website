@@ -68,7 +68,7 @@ export function ProjectsSection() {
               
               <div className="p-8">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-bold text-accent">{project.title}</h3>
+                  <h3 className="text-2xl font-bold text-foreground dark:text-accent">{project.title}</h3>
                   <div className="flex space-x-3">
                     <button className="text-primary hover:text-accent transition-colors">
                       <ExternalLink className="h-5 w-5" />
@@ -79,7 +79,7 @@ export function ProjectsSection() {
                   </div>
                 </div>
                 
-                <p className="text-muted-foreground mb-6">
+                <p className="text-foreground dark:text-muted-foreground mb-6">
                   {project.description}
                 </p>
                 
@@ -115,8 +115,8 @@ export function ProjectsSection() {
               />
               
               <div className="p-6">
-                <h4 className="text-lg font-bold text-accent mb-2">{project.title}</h4>
-                <p className="text-muted-foreground text-sm mb-4">
+                <h4 className="text-lg font-bold text-foreground dark:text-accent mb-2">{project.title}</h4>
+                <p className="text-foreground dark:text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
