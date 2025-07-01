@@ -75,8 +75,13 @@ export function ContactSection() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log('Form submit triggered');
     e.preventDefault();
+    
+    console.log('Current form data:', formData);
+    
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.projectType || !formData.message) {
+      console.log('Validation failed - missing required fields');
       toast({
         title: "Error",
         description: "Please fill in all required fields",
@@ -85,9 +90,11 @@ export function ContactSection() {
       return;
     }
 
+    console.log('Validation passed, starting submission');
     setIsSubmitting(true);
     try {
       await sendEmail(formData);
+      console.log('Email sent successfully');
       toast({
         title: "Success",
         description: t('messageSent'),
@@ -102,12 +109,14 @@ export function ContactSection() {
         message: ""
       });
     } catch (error: any) {
+      console.error('Email sending failed:', error);
       toast({
         title: "Error",
         description: error.message || "Failed to send message. Please check your EmailJS configuration.",
         variant: "destructive",
       });
     } finally {
+      console.log('Form submission completed');
       setIsSubmitting(false);
     }
   };
