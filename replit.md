@@ -116,6 +116,9 @@ Changelog:
 - July 01, 2025. Created custom select component to resolve runtime errors
 - July 01, 2025. Replaced Download CV button with Contact Me button that scrolls to contact section
 - July 01, 2025. Implemented EmailJS integration for direct email sending without database dependency
+- July 01, 2025. Updated contact email to aleksander.eerma@hotmail.com throughout application
+- July 01, 2025. Created comprehensive deployment documentation and production-ready package
+- July 01, 2025. Portfolio completed and ready for deployment to any hosting provider
 ```
 
 ## User Preferences
