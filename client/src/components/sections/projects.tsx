@@ -1,6 +1,7 @@
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/use-language";
+import { Link } from "wouter";
 
 export function ProjectsSection() {
   const { t } = useLanguage();
@@ -135,14 +136,13 @@ export function ProjectsSection() {
         <div className="text-center mt-12">
           <Button 
             variant="outline"
-            onClick={() => {
-              // You can implement this to navigate to a projects page or expand the section
-              // For now, this is just a placeholder action
-            }}
+            asChild
             className="px-8 py-4 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transform hover:scale-105 transition-all duration-300"
           >
-            {t('viewAllProjects')}
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <Link href="/projects">
+              {t('viewAllProjects')}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </div>
