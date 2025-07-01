@@ -12,7 +12,7 @@ export const translations = {
     heroTitle: "Alex Developer",
     heroDescription: "I craft exceptional digital experiences through innovative web development and cutting-edge technology solutions.",
     viewWork: "View My Work",
-    downloadCV: "Download CV",
+    contactMe: "Contact Me",
     
     // About Section
     aboutMe: "About Me",
@@ -87,7 +87,7 @@ export const translations = {
     heroTitle: "Alex Developer",
     heroDescription: "Loon erakordset digitaalset kogemust läbi innovatiivse veebiarenduse ja tipptasemel tehnoloogialahenduste.",
     viewWork: "Vaata Minu Tööd",
-    downloadCV: "Lae alla CV",
+    contactMe: "Võta Ühendust",
     
     // About Section
     aboutMe: "Minust",

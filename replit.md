@@ -115,6 +115,7 @@ Changelog:
 - July 01, 2025. Fixed contact form dropdown errors and improved light mode visibility
 - July 01, 2025. Removed Twitter icons and enhanced color consistency with green theme
 - July 01, 2025. Created custom select component to resolve runtime errors
+- July 01, 2025. Replaced Download CV button with Contact Me button that scrolls to contact section
 ```
 
 ## User Preferences

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
 import { ThreeBackground } from "@/components/three-background";
 
@@ -8,6 +8,13 @@ export function HeroSection() {
 
   const scrollToProjects = () => {
     const element = document.getElementById('projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -54,10 +61,11 @@ export function HeroSection() {
             
             <Button
               variant="outline"
+              onClick={scrollToContact}
               className="px-8 py-4 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transform hover:scale-105 transition-all duration-300"
             >
-              {t('downloadCV')}
-              <Download className="ml-2 h-4 w-4" />
+              {t('contactMe')}
+              <MessageCircle className="ml-2 h-4 w-4" />
             </Button>
           </div>
 
