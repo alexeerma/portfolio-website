@@ -40,6 +40,11 @@ export function ContactSection() {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
     
+    // Check if EmailJS is properly configured
+    if (serviceId === 'your_service_id' || templateId === 'your_template_id' || publicKey === 'your_public_key') {
+      throw new Error('EmailJS is not configured. Please set up your EmailJS credentials in the .env file. Check EMAILJS_SETUP.md for instructions.');
+    }
+    
     // Use environment variable for recipient email, fallback to contact section email
     const recipientEmail = import.meta.env.VITE_CONTACT_EMAIL || 'aleksander.eerma@hotmail.com';
     const recipientName = import.meta.env.VITE_CONTACT_NAME || 'Alex Developer';
@@ -56,10 +61,15 @@ export function ContactSection() {
       reply_to: data.email, // So you can reply directly to the sender
     };
 
+    console.log('Sending email with params:', templateParams);
+    console.log('Using EmailJS config:', { serviceId, templateId, publicKey: publicKey.substring(0, 6) + '...' });
+
     try {
       const result = await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      console.log('Email sent successfully:', result);
       return result;
     } catch (error) {
+      console.error('EmailJS error:', error);
       throw error;
     }
   };
