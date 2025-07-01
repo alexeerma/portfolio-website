@@ -75,11 +75,7 @@ export function ContactSection() {
   };
 
   const handleInputChange = (field: keyof ContactForm, value: string) => {
-    try {
-      setFormData(prev => ({ ...prev, [field]: value }));
-    } catch (error) {
-      console.error('Error updating form data:', error);
-    }
+    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   return (

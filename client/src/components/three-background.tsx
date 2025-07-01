@@ -15,8 +15,11 @@ export function ThreeBackground() {
       // Load Three.js dynamically
       if (!window.THREE) {
         const script = document.createElement('script');
-        script.src = 'https://unpkg.com/three@0.158.0/build/three.min.js';
+        script.src = 'https://unpkg.com/three@0.160.0/build/three.min.js';
         script.onload = () => initScene();
+        script.onerror = () => {
+          // Silently fail if Three.js doesn't load
+        };
         document.head.appendChild(script);
       } else {
         initScene();
