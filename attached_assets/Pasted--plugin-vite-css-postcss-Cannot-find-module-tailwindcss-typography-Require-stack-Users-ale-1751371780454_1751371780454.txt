@@ -1,0 +1,22 @@
+[plugin:vite:css] [postcss] Cannot find module '@tailwindcss/typography'
+Require stack:
+- /Users/aleksandereerma/Downloads/DynamicPortfolio/tailwind.config.ts
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1144:15)
+    at Function.resolve (node:internal/modules/helpers:187:19)
+    at _resolve (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/jiti/dist/jiti.js:1:241814)
+    at jiti (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/jiti/dist/jiti.js:1:244531)
+    at /Users/aleksandereerma/Downloads/DynamicPortfolio/tailwind.config.ts:89:45
+    at evalModule (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/jiti/dist/jiti.js:1:247313)
+    at jiti (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/jiti/dist/jiti.js:1:245241)
+    at /Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/tailwindcss/lib/lib/load-config.js:52:26
+    at loadConfig (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/tailwindcss/lib/lib/load-config.js:62:6)
+    at getTailwindConfig (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/tailwindcss/lib/lib/setupTrackingContext.js:71:116)
+    at /Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/tailwindcss/lib/lib/setupTrackingContext.js:100:92
+    at /Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/tailwindcss/lib/processTailwindFeatures.js:46:11
+    at plugins (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/tailwindcss/lib/plugin.js:38:69)
+    at LazyResult.runOnRoot (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/postcss/lib/lazy-result.js:361:16)
+    at LazyResult.runAsync (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/postcss/lib/lazy-result.js:290:26)
+    at LazyResult.async (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/postcss/lib/lazy-result.js:192:30)
+    at LazyResult.then (/Users/aleksandereerma/Downloads/DynamicPortfolio/node_modules/postcss/lib/lazy-result.js:436:17
+Click outside, press Esc key, or fix the code to dismiss.
+You can also disable this overlay by setting server.hmr.overlay to false in vite.config.ts.
