@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ContactSelect } from "@/components/contact-select";
 import { Label } from "@/components/ui/label";
 import { useLanguage } from "@/hooks/use-language";
 import { useToast } from "@/hooks/use-toast";
@@ -75,7 +75,11 @@ export function ContactSection() {
   };
 
   const handleInputChange = (field: keyof ContactForm, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    try {
+      setFormData(prev => ({ ...prev, [field]: value }));
+    } catch (error) {
+      console.error('Error updating form data:', error);
+    }
   };
 
   return (
@@ -214,33 +218,35 @@ export function ContactSection() {
 
               <div>
                 <Label className="text-foreground dark:text-accent">{t('projectType')} *</Label>
-                <Select value={formData.projectType} onValueChange={(value) => handleInputChange('projectType', value)}>
-                  <SelectTrigger className="mt-2">
-                    <SelectValue placeholder={t('selectProjectType')} />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="web-app">{t('webApp')}</SelectItem>
-                    <SelectItem value="mobile-app">{t('mobileApp')}</SelectItem>
-                    <SelectItem value="ecommerce">{t('ecommerce')}</SelectItem>
-                    <SelectItem value="consulting">{t('consulting')}</SelectItem>
-                    <SelectItem value="other">{t('other')}</SelectItem>
-                  </SelectContent>
-                </Select>
+                <ContactSelect
+                  value={formData.projectType}
+                  placeholder={t('selectProjectType')}
+                  options={[
+                    { value: "web-app", label: t('webApp') },
+                    { value: "mobile-app", label: t('mobileApp') },
+                    { value: "ecommerce", label: t('ecommerce') },
+                    { value: "consulting", label: t('consulting') },
+                    { value: "other", label: t('other') }
+                  ]}
+                  onValueChange={(value) => handleInputChange('projectType', value)}
+                  className="mt-2"
+                />
               </div>
 
               <div>
                 <Label className="text-foreground dark:text-accent">{t('budgetRange')}</Label>
-                <Select value={formData.budgetRange} onValueChange={(value) => handleInputChange('budgetRange', value)}>
-                  <SelectTrigger className="mt-2">
-                    <SelectValue placeholder={t('selectBudget')} />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="5k-10k">€5,000 - €10,000</SelectItem>
-                    <SelectItem value="10k-25k">€10,000 - €25,000</SelectItem>
-                    <SelectItem value="25k-50k">€25,000 - €50,000</SelectItem>
-                    <SelectItem value="50k+">€50,000+</SelectItem>
-                  </SelectContent>
-                </Select>
+                <ContactSelect
+                  value={formData.budgetRange}
+                  placeholder={t('selectBudget')}
+                  options={[
+                    { value: "5k-10k", label: "€5,000 - €10,000" },
+                    { value: "10k-25k", label: "€10,000 - €25,000" },
+                    { value: "25k-50k", label: "€25,000 - €50,000" },
+                    { value: "50k+", label: "€50,000+" }
+                  ]}
+                  onValueChange={(value) => handleInputChange('budgetRange', value)}
+                  className="mt-2"
+                />
               </div>
 
               <div>
