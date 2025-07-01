@@ -135,6 +135,10 @@ export function ProjectsSection() {
         <div className="text-center mt-12">
           <Button 
             variant="outline"
+            onClick={() => {
+              // You can implement this to navigate to a projects page or expand the section
+              console.log('View all projects clicked');
+            }}
             className="px-8 py-4 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transform hover:scale-105 transition-all duration-300"
           >
             {t('viewAllProjects')}
