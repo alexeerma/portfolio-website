@@ -6,44 +6,56 @@ export function ExperienceSection() {
 
   const workExperience = [
     {
-      period: "2022 - Present",
-      company: "TechCorp Solutions",
-      title: "Senior Full-Stack Developer",
-      description: "Led a team of 5 developers in building scalable web applications using React, Node.js, and AWS. Implemented CI/CD pipelines and improved deployment efficiency by 40%.",
-      technologies: ["React", "Node.js", "AWS", "PostgreSQL"]
+      period: t('workExp1Period'),
+      company: t('workExp1Company'),
+      title: t('workExp1Title'),
+      description: t('workExp1Description'),
+      technologies: ["Javascript", "PHP", "React", "MySQL", "ACF", "Elementor", "Custom Plugins", "Wordpress"]
     },
     {
-      period: "2020 - 2022",
-      company: "Digital Agency Pro",
-      title: "Frontend Developer",
-      description: "Developed responsive web applications for various clients using React and Vue.js. Collaborated with design teams to implement pixel-perfect UI components.",
-      technologies: ["React", "Vue.js", "Sass", "JavaScript"]
+      period: t('workExp2Period'),
+      company: t('workExp2Company'),
+      title: t('workExp2Title'),
+      description: t('workExp2Description'),
+      technologies: ["Jira", "Project Planning", "Magento", "Wordpress"]
     },
     {
-      period: "2019 - 2020",
-      company: "StartupVenture Inc",
-      title: "Junior Developer",
-      description: "Built and maintained web applications using HTML, CSS, JavaScript, and PHP. Gained experience in database design and backend development.",
-      technologies: ["HTML/CSS", "JavaScript", "PHP", "MySQL"]
+      period: t('workExp3Period'),
+      company: t('workExp3Company'),
+      title: t('workExp3Title'),
+      description: t('workExp3Description'),
+      technologies: ["Adobe XD", "Figma", "Swagger", "Confluence", "Jira", "MySQL"]
+    },
+    {
+      period: t('workExp4Period'),
+      company: t('workExp4Company'),
+      title: t('workExp4Title'),
+      description: t('workExp4Description'),
+      technologies: ["HTML/CSS", "BPMN", "Jira", "MySQL"]
+    },
+
+    {
+      period: t('workExp5Period'),
+      company: t('workExp5Company'),
+      title: t('workExp5Title'),
+      description: t('workExp5Description'),
+      technologies: ["Volleyball"]
     }
+
+
   ];
 
   const certifications = [
     {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: "2023"
+      title: "Become a Wordpress Developer: Unlocking Power With Code",
+      issuer: "Noble Work Foundation",
+      year: "Nov 2022"
     },
     {
-      title: "React Developer Certification",
-      issuer: "Meta (Facebook)",
-      year: "2022"
+      title: "Web Developer Bootcamp",
+      issuer: "Udemy",
+      year: "Feb 2021"
     },
-    {
-      title: "Docker Certified Associate",
-      issuer: "Docker Inc.",
-      year: "2022"
-    }
   ];
 
   return (
@@ -102,11 +114,19 @@ export function ExperienceSection() {
               
               <div className="space-y-6">
                 <div className="pb-6 border-b border-border last:border-b-0">
-                  <div className="text-primary font-mono text-sm mb-2">2015 - 2019</div>
-                  <h4 className="text-lg font-bold text-foreground dark:text-accent mb-2">Bachelor's in Computer Science</h4>
+                  <div className="text-primary font-mono text-sm mb-2">2014 - 2017</div>
+                  <h4 className="text-lg font-bold text-foreground dark:text-accent mb-2">Bachelor of Applied Science - BASc - Logistics and Supply Chain Management</h4>
                   <p className="text-foreground dark:text-muted-foreground text-sm">University of Technology, Estonia</p>
                   <p className="text-foreground dark:text-muted-foreground text-sm mt-2">
-                    Graduated with honors, specialized in software engineering and web technologies.
+                    Played professional volleyball in the University team at the same time. 
+                  </p>
+                </div>
+                <div className="pb-6 border-b border-border last:border-b-0">
+                <div className="text-primary font-mono text-sm mb-2">2019 - 2022</div>
+                  <h4 className="text-lg font-bold text-foreground dark:text-accent mb-2">Master's degree, Analysis and Design of Information Systems</h4>
+                  <p className="text-foreground dark:text-muted-foreground text-sm">University of Technology, Estonia</p>
+                  <p className="text-foreground dark:text-muted-foreground text-sm mt-2">
+                    Specialized in business IT and took extra software development courses.
                   </p>
                 </div>
               </div>

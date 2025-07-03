@@ -51,7 +51,7 @@ export function AboutSection() {
                 <div className="flex flex-wrap gap-3">
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">React</span>
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Next.js</span>
-                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Vue.js</span>
+                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Three.js</span>
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">TypeScript</span>
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Tailwind CSS</span>
                 </div>
@@ -63,8 +63,8 @@ export function AboutSection() {
                 <div className="flex flex-wrap gap-3">
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Node.js</span>
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Python</span>
-                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Express.js</span>
-                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">PostgreSQL</span>
+                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">PHP</span>
+                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">MySQL</span>
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">MongoDB</span>
                 </div>
               </div>
@@ -73,9 +73,6 @@ export function AboutSection() {
               <div>
                 <h4 className="font-semibold mb-3 text-foreground dark:text-accent">{t('cloudDevops')}</h4>
                 <div className="flex flex-wrap gap-3">
-                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">AWS</span>
-                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Docker</span>
-                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Kubernetes</span>
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Git</span>
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">CI/CD</span>
                 </div>

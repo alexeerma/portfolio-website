@@ -154,7 +154,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-foreground dark:text-accent">{t('phone')}</div>
-                    <div className="text-muted-foreground">+372 5123 4567</div>
+                    <div className="text-muted-foreground">+372 5387 0061</div>
                   </div>
                 </div>
 
@@ -164,7 +164,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-foreground dark:text-accent">{t('location')}</div>
-                    <div className="text-muted-foreground">Tallinn, Estonia</div>
+                    <div className="text-muted-foreground">Tartu, Estonia</div>
                   </div>
                 </div>
               </div>
