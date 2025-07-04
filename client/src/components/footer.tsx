@@ -16,10 +16,14 @@ export function Footer() {
           </p>
           <div className="flex justify-center space-x-6 mb-8">
             <button className="text-muted-foreground hover:text-primary transition-colors duration-200">
-              <Linkedin className="h-5 w-5" />
+              <a href="https://www.linkedin.com/in/aleksander-eerma-416b281a2/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5" />
+              </a>
             </button>
             <button className="text-muted-foreground hover:text-primary transition-colors duration-200">
-              <Github className="h-5 w-5" />
+              <a href="https://www.github.com/alexeerma" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5" />
+              </a>
             </button>
           </div>
           <div className="border-t border-border pt-8">

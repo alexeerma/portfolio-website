@@ -27,7 +27,9 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-primary font-mono">&lt;Alex /&gt;</span>
+            <a href="https://alexeerma.ee/" rel="noopener noreferrer">
+              <span className="text-2xl font-bold text-primary font-mono">&lt;Alex /&gt;</span>
+            </a>
           </div>
 
           {/* Desktop Menu */}

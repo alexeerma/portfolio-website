@@ -174,10 +174,14 @@ export function ContactSection() {
                 <h4 className="font-semibold mb-4 text-foreground dark:text-accent">{t('followMe')}</h4>
                 <div className="flex space-x-4">
                   <Button variant="ghost" size="icon" className="bg-primary/20 text-primary hover:bg-primary/30">
-                    <Linkedin className="h-4 w-4" />
+                    <a href="https://www.linkedin.com/in/aleksander-eerma-416b281a2/" target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="h-5 w-5" />
+                    </a>
                   </Button>
                   <Button variant="ghost" size="icon" className="bg-primary/20 text-primary hover:bg-primary/30">
-                    <Github className="h-4 w-4" />
+                    <a href="https://www.github.com/alexeerma" target="_blank" rel="noopener noreferrer">
+                      <Github className="h-5 w-5" />
+                    </a>
                   </Button>
                 </div>
               </div>
