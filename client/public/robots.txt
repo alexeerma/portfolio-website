@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://alexeerma.ee/sitemap.xml
+
+# Crawl-delay for good manners
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Disallow sensitive areas (if any in future)
+# Disallow: /admin/
+# Disallow: /private/

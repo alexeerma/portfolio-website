@@ -2,45 +2,60 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/use-language";
 import { Link } from "wouter";
+import portfolio  from "@assets/portfolio.png";
+import myhome from "@assets/Myhome.png";
+import youtube from "@assets/youtube.png";
+import threeDport from "@assets/threeDport.png";
+import eventscal from "@assets/eventscalendar.jpg";
+
 
 export function ProjectsSection() {
   const { t } = useLanguage();
 
+
   const featuredProjects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform with real-time inventory management, payment processing, and advanced analytics dashboard.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
-      stats: { uptime: "99%", loadTime: "2.3s", users: "50k+" }
+      title: t('project1Title'),
+      description: t('project1Description'),
+      image: portfolio,
+      technologies: ["React", "Three.js", "EmailJS", "TailwindCss"],
+      stats: { 
+        [t('project1Stat1')]: "99%", 
+        [t('project1Stat2')]: "2.3s", 
+        [t('project1Stat3')]: "50k+" 
+      }
     },
     {
-      title: "FinTech Mobile App",
-      description: "Cross-platform mobile application for personal finance management with AI-powered spending insights and budget optimization.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      technologies: ["React Native", "Python", "MongoDB", "TensorFlow"],
-      stats: { rating: "4.8★", downloads: "100k+", platforms: "iOS & Android" }
+      title: t('project2Title'),
+      description: t('project2Description'),
+      image: youtube,
+      technologies: ["React", "Node.js", "MongoDB", "Firebase"],
+      stats: { 
+        [t('project2Stat1')]: "4.8★", 
+        [t('project2Stat2')]: "100k+", 
+        [t('project2Stat3')]: "iOS & Android" 
+      }
     }
   ];
 
   const otherProjects = [
     {
-      title: "DevOps Dashboard",
-      description: "Real-time monitoring and deployment management system.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-      technologies: ["Vue.js", "Docker", "Redis"]
+      title: "Myhome",
+      description: t('otherProject1Description'),
+      image: myhome,
+      technologies: ["Wordpess", "Docker", "Redis", "API", "PHP"],
     },
     {
-      title: "AI Analytics Platform",
-      description: "Machine learning pipeline for predictive analytics.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-      technologies: ["Python", "FastAPI", "TensorFlow"]
+      title: "3D portfolio project",
+      description: t('otherProject2Description'),
+      image: threeDport,
+      technologies: ["Three.js", "React", "Tailwind,", "EmailJS"],
     },
     {
-      title: "DeFi Protocol",
-      description: "Decentralized finance application on Ethereum.",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-      technologies: ["Solidity", "Web3.js", "React"]
+      title: "Events Calendar plugin for WP",
+      description: t('otherProject3Description'),
+      image:  eventscal,
+      technologies: ["PHP", "CSS", "ACF"]
     }
   ];
 

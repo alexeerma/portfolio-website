@@ -2,9 +2,21 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Github, ArrowLeft, Filter } from "lucide-react";
+import { ExternalLink, Github, ArrowLeft, Filter, Moon, Sun } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
+import { useTheme } from "@/hooks/use-theme";
 import { Link } from "wouter";
+import { SEOHead, seoConfigs } from "@/components/seo-head";
+
+import portfolio  from "@assets/portfolio.png";
+import myhome from "@assets/Myhome.png";
+import youtube from "@assets/youtube.png";
+import eventscal from "@assets/eventscalendar.jpg";
+import netflix from "@assets/Netflix.webp";
+import karinak from "@assets/karinak.png";
+import puslekeskus from "@assets/puslekeskus.png";
+import wisetrans from "@assets/wisetrans.png";
+import orthoqp from "@assets/Orthoq.png";
 
 interface Project {
   id: string;
@@ -21,94 +33,134 @@ interface Project {
 }
 
 export default function ProjectsPage() {
-  const { t } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
+
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "et" : "en");
+  };
   // You can customize these projects with your actual work
   const projects: Project[] = [
     {
       id: "1",
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration",
-      longDescription: "A comprehensive e-commerce platform built with React and Node.js, featuring user authentication, product catalog, shopping cart, and Stripe payment integration. Includes admin dashboard for inventory management.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "Stripe"],
+      title: t('fullProject1Title'),
+      description: t('fullProject1Description'),
+      longDescription: t('fullProject1LongDescription'),
+      image: portfolio,
+      technologies: ["React", "Node.js", "TypeScript", "Three.js", "TailwindCss"],
       category: "web-app",
-      githubUrl: "https://github.com/yourusername/ecommerce",
-      liveUrl: "https://yourstore.com",
+      liveUrl: "https://alexeerma.ee",
+      githubUrl: "https://github.com/alexeerma/portfolio-website",
       status: "completed",
       featured: true
     },
     {
       id: "2",
-      title: "Task Management API",
-      description: "RESTful API for project and task management",
-      longDescription: "A robust REST API built with Express.js and MongoDB for managing projects, tasks, and team collaboration. Features JWT authentication, role-based permissions, and real-time updates.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Node.js", "Express", "MongoDB", "JWT", "Socket.io"],
-      category: "backend",
-      githubUrl: "https://github.com/yourusername/task-api",
+      title: t('fullProject2Title'),
+      description: t('fullProject2Description'),
+      longDescription: t('fullProject2LongDescription'),
+      image: youtube,
+      technologies: ["React", "Redux", "Tawilwind", "Firebase"],
+      category: "web-app",
+      githubUrl: "https://github.com/alexeerma/Youtube-clone",
       status: "completed",
       featured: false
     },
     {
       id: "3",
-      title: "Mobile Weather App",
-      description: "React Native weather application with location services",
-      longDescription: "Cross-platform mobile app providing detailed weather forecasts, location-based updates, and push notifications for weather alerts. Built with React Native and integrated with multiple weather APIs.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React Native", "TypeScript", "Redux", "OpenWeather API"],
-      category: "mobile",
-      githubUrl: "https://github.com/yourusername/weather-app",
+      title: t('fullProject3Title'),
+      description: t('fullProject3Description'),
+      longDescription: t('fullProject3LongDescription'),
+      image: netflix,
+      technologies: ["React", "TypeScript", "Redux", "Firebase"],
+      category: "web-app",
+      githubUrl: "https://github.com/alexeerma/netflix-clone",
       status: "completed",
       featured: true
     },
     {
       id: "4",
-      title: "Data Analytics Dashboard",
-      description: "Interactive dashboard for business intelligence",
-      longDescription: "Real-time analytics dashboard built with React and D3.js, featuring interactive charts, data visualization, and export capabilities for business intelligence and reporting.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "D3.js", "Python", "FastAPI", "PostgreSQL"],
-      category: "data-science",
-      githubUrl: "https://github.com/yourusername/analytics-dashboard",
-      liveUrl: "https://analytics.yoursite.com",
+      title: t('fullProject4Title'),
+      description: t('fullProject4Description'),
+      longDescription: t('fullProject4LongDescription'),
+      image: myhome,
+      technologies: ["Javascript", "PHP", "Docker", "Elementor", "API"],
+      category: "wordpress",
+      liveUrl: "https://myhome.ee",
       status: "in-progress",
       featured: true
     },
     {
       id: "5",
-      title: "AI Chatbot Integration",
-      description: "Customer service chatbot with natural language processing",
-      longDescription: "AI-powered chatbot system using OpenAI GPT for customer service automation. Features conversation memory, intent recognition, and seamless handoff to human agents.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Python", "OpenAI API", "Flask", "Redis", "WebSocket"],
-      category: "ai-ml",
-      status: "planning",
+      title:t('fullProject5Title'),
+      description: t('fullProject5Description'),
+      longDescription: t('fullProject5LongDescription'),
+      image: karinak,
+      technologies: ["Docker", "Custom Theme", "jQuery", "Redis", "PHP"],
+      category: "wordpress",
+      githubUrl: "https://github.com/alexeerma/KarinaK-theme",
+      status: "in-progress",
       featured: false
     },
     {
       id: "6",
-      title: "DevOps Pipeline",
-      description: "CI/CD pipeline with automated testing and deployment",
-      longDescription: "Complete DevOps solution implementing CI/CD pipelines, automated testing, infrastructure as code, and monitoring. Deployed on AWS with Docker containerization.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Docker", "AWS", "Jenkins", "Terraform", "Kubernetes"],
-      category: "devops",
-      githubUrl: "https://github.com/yourusername/devops-pipeline",
+      title: t('fullProject6Title'),
+      description: t('fullProject6Description'),
+      longDescription: t('fullProject6LongDescription'),
+      image: orthoqp,
+      technologies: ["Docker", "Templates", "jQuery", "PHP"],
+      category: "wordpress",
+      liveUrl: "https://orthoq.ee",
+      status: "completed",
+      featured: false
+    },
+    {
+      id: "7",
+      title: t('fullProject7Title'),
+      description: t('fullProject7Description'),
+      longDescription: t('fullProject7LongDescription'),
+      image: puslekeskus,
+      technologies: ["Docker", "Wordpress", "Javascript", "Templates", "PHP"],
+      category: "wordpress",
+      liveUrl: "https://puslekeskus.ee",
+      status: "completed",
+      featured: false
+    },
+    {
+      id: "8",
+      title:t('fullProject8Title'),
+      description: t('fullProject8Description'),
+      longDescription: t('fullProject8LongDescription'),
+      image: wisetrans,
+      technologies: ["Docker", "API", "PHP", "Wordpress", "jQuery"],
+      category: "wordpress",
+      liveUrl: "https://wisetrans.ee",
+      status: "completed",
+      featured: false
+    },
+    {
+      id: "9",
+      title: t('fullProject9Title'),
+      description: t('fullProject9Description'),
+      longDescription: t('fullProject9LongDescription'),
+      image: eventscal,
+      technologies: ["Docker", "API", "PHP", "Wordpress", "jQuery"],
+      category: "plugin",
+      githubUrl: "https://github.com/alexeerma/events-calendar-plugin",
       status: "completed",
       featured: false
     }
   ];
 
   const categories = [
-    { value: "all", label: "All Projects" },
-    { value: "web-app", label: "Web Applications" },
-    { value: "mobile", label: "Mobile Apps" },
-    { value: "backend", label: "Backend/API" },
-    { value: "data-science", label: "Data Science" },
-    { value: "ai-ml", label: "AI/Machine Learning" },
-    { value: "devops", label: "DevOps" }
+    { value: "all", label: t('allCategories') },
+    { value: "web-app", label: t('webAppCategory') },
+    { value: "wordpress", label: t('wordpressCategory') },
+    { value: "plugin", label: t('pluginCategory') },
+    { value: "design", label: t('designCategory') },
+    { value: "store", label: t('storeCategory') }
   ];
 
   const filteredProjects = selectedCategory === "all" 
@@ -135,6 +187,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead {...seoConfigs.projects} />
       {/* Header */}
       <header className="border-b border-border bg-background/80 backdrop-blur-lg sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -142,13 +195,35 @@ export default function ProjectsPage() {
             <Link href="/">
               <Button variant="ghost" size="sm" className="gap-2">
                 <ArrowLeft className="h-4 w-4" />
-                Back to Home
+                {t('backToHome')}
               </Button>
             </Link>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              All Projects
+              {t('allProjects')}
             </h1>
-            <div className="w-20" /> {/* Spacer for centering */}
+            
+            {/* Language and Theme Switchers */}
+            <div className="flex items-center gap-2">
+              {/* Language Switcher */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleLanguage}
+                className="text-sm font-medium"
+              >
+                {language === "en" ? "EST" : "ENG"}
+              </Button>
+              
+              {/* Theme Switcher */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleTheme}
+                className="p-2"
+              >
+                {theme === "light" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
+              </Button>
+            </div>
           </div>
         </div>
       </header>
@@ -159,7 +234,7 @@ export default function ProjectsPage() {
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Filter className="h-5 w-5 text-muted-foreground" />
-            <span className="text-sm font-medium text-muted-foreground">Filter by category:</span>
+            <span className="text-sm font-medium text-muted-foreground">{t('filterByCategory')}</span>
           </div>
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
@@ -182,12 +257,27 @@ export default function ProjectsPage() {
             <Card key={project.id} className="group perspective-card glassmorphism border-border/50 hover:border-primary/50 transition-all duration-300">
               <CardHeader className="space-y-4">
                 {/* Project Image Placeholder */}
-                <div className="w-full h-48 bg-muted rounded-lg flex items-center justify-center overflow-hidden">
-                  <div className="text-muted-foreground text-sm text-center p-4">
-                    <div className="w-16 h-16 mx-auto mb-2 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <ExternalLink className="h-8 w-8 text-primary" />
+                {/* Project Image - REPLACE THIS SECTION */}
+                <div className="w-full h-48 bg-muted rounded-lg overflow-hidden">
+                  <img 
+                    src={project.image}  // ← Fixed: Use project.image instead of image
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      // Fallback if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const fallback = target.parentElement?.querySelector('.fallback-placeholder');
+                      if (fallback) fallback.classList.remove('hidden');
+                    }}
+                  />
+                  <div className="fallback-placeholder hidden w-full h-full flex items-center justify-center">
+                    <div className="text-muted-foreground text-sm text-center p-4">
+                      <div className="w-16 h-16 mx-auto mb-2 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <ExternalLink className="h-8 w-8 text-primary" />
+                      </div>
+                      {t('projectScreenshot')}
                     </div>
-                    Project Screenshot
                   </div>
                 </div>
                 
@@ -245,7 +335,7 @@ export default function ProjectsPage() {
                     >
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
+                        Live
                       </a>
                     </Button>
                   )}
@@ -261,8 +351,8 @@ export default function ProjectsPage() {
             <div className="w-16 h-16 mx-auto mb-4 bg-muted rounded-lg flex items-center justify-center">
               <Filter className="h-8 w-8 text-muted-foreground" />
             </div>
-            <h3 className="text-lg font-semibold mb-2">No projects found</h3>
-            <p className="text-muted-foreground">Try selecting a different category filter.</p>
+            <h3 className="text-lg font-semibold mb-2">{t('noProjectsFound')}</h3>
+            <p className="text-muted-foreground">{t('tryDifferentFilter')}</p>
           </div>
         )}
       </main>

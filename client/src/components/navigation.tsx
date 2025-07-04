@@ -68,14 +68,14 @@ export function Navigation() {
 
           {/* Controls */}
           <div className="flex items-center space-x-4">
-            {/* Language Toggle */}
+            {/* Language Switcher */}
             <Button
               onClick={toggleLanguage}
               variant="secondary"
               size="sm"
               className="bg-primary text-background hover:bg-primary/80"
             >
-              {language.toUpperCase()}
+              {language === "en" ? "EST" : "ENG"}
             </Button>
 
             {/* Theme Toggle */}

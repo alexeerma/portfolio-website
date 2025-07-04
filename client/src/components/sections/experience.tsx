@@ -47,16 +47,17 @@ export function ExperienceSection() {
 
   const certifications = [
     {
-      title: "Become a Wordpress Developer: Unlocking Power With Code",
-      issuer: "Noble Work Foundation",
-      year: "Nov 2022"
+      title: t('cert1Title'),
+      issuer: t('cert1Issuer'),
+      year: t('cert1Year')
     },
     {
-      title: "Web Developer Bootcamp",
-      issuer: "Udemy",
-      year: "Feb 2021"
+      title: t('cert2Title'),
+      issuer: t('cert2Issuer'),
+      year: t('cert2Year')
     },
   ];
+
 
   return (
     <section id="experience" className="py-20 bg-muted/50">

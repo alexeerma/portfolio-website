@@ -60,10 +60,101 @@ export const translations = {
     workExp5Title: "Professional Volleyball player",
     workExp5Description: "Started playing pro-volleybal since 2014 and continued doing that.",
     
-    // Projects Section
-    featuredProjects: "Featured Projects",
-    projectsDescription: "A showcase of my recent work and technical achievements.",
-    viewAllProjects: "View All Projects",
+     // Certifications Data
+     cert1Title: "Become a Wordpress Developer: Unlocking Power With Code",
+     cert1Issuer: "Noble Work Foundation",
+     cert1Year: "Nov 2022",
+     
+     cert2Title: "Web Developer Bootcamp",
+     cert2Issuer: "Udemy",
+     cert2Year: "Feb 2021",
+     
+     
+     // Projects Section
+     featuredProjects: "Featured Projects",
+     projectsDescription: "A showcase of my recent work and technical achievements.",
+     viewAllProjects: "View All Projects",
+     allProjects: "All Projects",
+     backToHome: "Back to Home",
+     filterByCategory: "Filter by category:",
+     noProjectsFound: "No projects found",
+     tryDifferentFilter: "Try selecting a different category filter.",
+     featured: "Featured",
+     completed: "Completed",
+     inProgress: "In Progress", 
+     planning: "Planning",
+     projectScreenshot: "Project Screenshot",
+     viewProject: "View Project",
+     viewCode: "View Code",
+     
+    // Categories
+    allCategories: "All Categories",
+    webAppCategory: "Web Applications",
+    wordpressCategory: "Wordpress", 
+    pluginCategory: "Plugin",
+    designCategory: "Design",
+    storeCategory: "E-commerce",
+
+    // Featured Projects Data
+    project1Title: "Portfolio Website",
+    project1Description: "A portfolio website with a little bit of everything - Three.js, React, Tailwind.",
+    project1Stat1: "Uptime",
+    project1Stat2: "Load Time", 
+    project1Stat3: "Users",
+    
+    project2Title: "Youtube clone",
+    project2Description: "Youtube clone with Db and Firebase authentication. Part of a code along video, but with some minor changes.",
+    project2Stat1: "Rating",
+    project2Stat2: "Downloads",
+    project2Stat3: "Platforms",
+    
+    // Other Projects Data
+    otherProject1Title: "Myhome",
+    otherProject1Description: "Wordpress based Real-Estate website with custom templates and some custom plugins. API connection with Scoro to import all the data.",
+    
+    otherProject2Title: "3D portfolio project", 
+    otherProject2Description: "Code along 3D portfolio project to practice Three.js and React.",
+    
+    otherProject3Title: "Events Calendar plugin for WP",
+    otherProject3Description: "A custom made plugin for Wordpress, based on clients needs and wants.",
+
+
+    // Full Projects Page Data
+    fullProject1Title: "Portfolio Website",
+    fullProject1Description: "Full-stack web application, with React, three.js, and Tailwind CSS.",
+    fullProject1LongDescription: "A portfolio website with a little bit of everything - Three.js, React, Tailwind. Started doing it to recall working with React.",
+
+    fullProject2Title: "Youtube Clone",
+    fullProject2Description: "A course code along for Youtube clone.",
+    fullProject2LongDescription: "Code along in a web development course, to implement React, Redux, and Firebase.",
+
+    fullProject3Title: "Netflix Clone",
+    fullProject3Description: "Netflix code in a code along course.",
+    fullProject3LongDescription: "Personal project for learning. Created a custom web-application with React. Chose a well known website and tried to copy the functionality. Not a full scale clone, but has the main functionalities.",
+
+    fullProject4Title: "Myhome",
+    fullProject4Description: "Interactive Wordpress real estate website",
+    fullProject4LongDescription: "Custom Real Estate Website for a client, that uses custom design and template logic. Extra API connection with Scoro to sync data across the applications.",
+
+    fullProject5Title: "Karinakaris",
+    fullProject5Description: "Custom theme for a psychologist website.",
+    fullProject5LongDescription: "Wordpress website with custom jQuery, PHP and templates. Made for a client for provides psychology services.",
+
+    fullProject6Title: "Orthoq",
+    fullProject6Description: "Wordpress site, that combines custom templates, Elementor and third party business software API.",
+    fullProject6LongDescription: "Custom made wordpress site, that has custom templates, blog, made with Elementor, PHP, jQuery. Implemented customd design and has a API connection with business software.",
+
+    fullProject7Title: "Puslekeskus",
+    fullProject7Description: "Simple Wordpress online store with woocommerce custom design and Elementor.",
+    fullProject7LongDescription: "Simple Wordpress + Woocommerce combo for an online store. Made with custom design and Elementor.",
+
+    fullProject8Title: "Wisetrans",
+    fullProject8Description: "Logistics website with 3rd party API integration",
+    fullProject8LongDescription: "A simple Logistics site that has a backend functionality and connection with 3rd party APIs for logistics services. Custom wordpress templates. Extra API connection with business software.",
+
+    fullProject9Title: "Events Calendar plugin",
+    fullProject9Description: "Custom plugin made for a client, that has need to show upcoming events. Made with PHP, jQuery and ACF.",
+    fullProject9LongDescription: "A simple plugin for a client, that replaces expensive events plugins, is lightweight and has some customizing optins.",
     
     // Contact Section
     workTogether: "Let's Work Together",
@@ -113,12 +204,12 @@ export const translations = {
     hello: "Tere, mina olen",
     heroTitle: "Alex",
     heroDescription: "Loon erinevaid digilahendusi ja kogemusi läbi veebiarenduse.",
-    viewWork: "Vaata Minu Töid",
-    contactMe: "Võta Ühendust",
+    viewWork: "Vaata minu töid",
+    contactMe: "Võta ühendust",
     
     // About Section
     aboutMe: "Minust",
-    aboutDescription: "Kirglik arendaja, kellel on teadmised kaasaegsete veebitehnoloogiate vallas ja kes on tähelepanelik kasutajakogemuse kujundamisel. Lisaks olen profivõrkpallur tugeva sporditaustaga.",
+    aboutDescription: "Arendaja, kellel on teadmised kaasaegsete veebitehnoloogiate vallas ja kes on tähelepanelik kasutajakogemuse kujundamisel. Lisaks olen profivõrkpallur tugeva sporditaustaga.",
     background: "Taust",
     backgroundText: "Alustasin logistikas ja lõpetasin projektijuhtimise kaudu veebiarenduses. Läbi äriIT õppimise hakkasin üha rohkem tegelema veebiarendusprojektidega ja lõpuks jäingi siia pidama.",
     projectsCompleted: "Lõpetatud Projektid",
@@ -162,10 +253,100 @@ export const translations = {
     workExp5Title: "Professionaalne Võrkpallur",
     workExp5Description: "Hakkasin profi võrkpalli mängima aastast 2014 ja olen seda teinud pidevalt kuni tänaseni. ",
     
+   // Certifications Data
+   cert1Title: "Become a Wordpress Developer: Unlocking Power With Code",
+   cert1Issuer: "Noble Work Foundation",
+   cert1Year: "Nov 2022",
+   
+   cert2Title: "Web Developer Bootcamp",
+   cert2Issuer: "Udemy",
+   cert2Year: "Feb 2021",
+    
     // Projects Section
-    featuredProjects: "Esile Tõstetud Projektid",
+    featuredProjects: "Esile tõstetud projektid",
     projectsDescription: "Minu viimaste tööde ja tehniliste saavutuste näiteid.",
-    viewAllProjects: "Vaata Kõiki Projekte",
+    viewAllProjects: "Vaata kõiki projekte",
+    allProjects: "Kõik projektid",
+    backToHome: "Tagasi avalehele",
+    filterByCategory: "Filtreeri kategooriate järgi:",
+    noProjectsFound: "Ühtegi projekti ei leitud.",
+    tryDifferentFilter: "Proovi valida teine kategooria filter.",
+    featured: "Esiletõstetud",
+    completed: "Lõpetatud",
+    inProgress: "Pooleli",
+    planning: "Kavandamine",
+    projectScreenshot: "Projekti kuvatõmmis",
+    viewProject: "Vaata projekti",
+    viewCode: "Vaata koodi",
+
+    // Categories
+    allCategories: "Kõik",
+    webAppCategory: "Veebileht",
+    wordpressCategory: "Wordpress", 
+    pluginCategory: "Moodul/plugin",
+    designCategory: "Design",
+    storeCategory: "E-commerce",
+
+    // Full Projects Page Data
+    fullProject1Title: "Portfoolio veebileht",
+    fullProject1Description: "Full-stack single page web application, mis on tehtud React'i, Three.js'i ja TailWindiga.",
+    fullProject1LongDescription: "Portfoolio veebileht, kus on natukene kõike - Three.js, React, Tailwind. Tegin eesmärgiga endale natukene Reacti jälle meedlde tuletada.",
+
+    fullProject2Title: "Youtube kloon",
+    fullProject2Description: "Kursuse raames code-along, et natukene rohkem Full-stack kogemust saada.",
+    fullProject2LongDescription: "Kursuse raames code-along veebiliides, kus praktiseerisin Reacti, Reduxi, Firebase autentimise eesmärgil.",
+
+    fullProject3Title: "Netflix kloon",
+    fullProject3Description: "Netflixi kloon kursuse code-alongi raames.",
+    fullProject3LongDescription: "Kursuse raames personaalne projekt, kus tuli teha kloon lehest. Tegin custom web app-i proovides kopeerida tuntud lehe funktsionaalsusi. Mitte full-scale, aga peamised funktsionaalsused on olemas.",
+
+    fullProject4Title: "Myhome wordpressi leht",
+    fullProject4Description: "Interactive Wordpress real estate website",
+    fullProject4LongDescription: "Custom Real Estate Website for a client, that uses custom design and template logic. Extra API connection with Scoro to sync data across the applications.",
+
+    fullProject5Title: "Karinakaris",
+    fullProject5Description: "Custom theme for a psychologist website.",
+    fullProject5LongDescription: "Wordpress website with custom jQuery, PHP and templates. Made for a client for provides psychology services.",
+
+    fullProject6Title: "Orthoq",
+    fullProject6Description: "Wordpress site, that combines custom templates, Elementor and third party business software API.",
+    fullProject6LongDescription: "Custom made wordpress site, that has custom templates, blog, made with Elementor, PHP, jQuery. Implemented customd design and has a API connection with business software.",
+
+    fullProject7Title: "Puslekeskus",
+    fullProject7Description: "Simple Wordpress online store with woocommerce custom design and Elementor.",
+    fullProject7LongDescription: "Simple Wordpress + Woocommerce combo for an online store. Made with custom design and Elementor.",
+
+    fullProject8Title: "Wisetrans",
+    fullProject8Description: "Logistics website with 3rd party API integration",
+    fullProject8LongDescription: "A simple Logistics site that has a backend functionality and connection with 3rd party APIs for logistics services. Custom wordpress templates. Extra API connection with business software.",
+
+    fullProject9Title: "Events Calendar plugin",
+    fullProject9Description: "Custom plugin made for a client, that has need to show upcoming events. Made with PHP, jQuery and ACF.",
+    fullProject9LongDescription: "A simple plugin for a client, that replaces expensive events plugins, is lightweight and has some customizing optins.",
+    
+
+    // Featured Projects Data
+    project1Title: "Personaalne portfoolio leht",
+    project1Description: "Portfoolio leht, kus on natukene kõike - Three.js, React, Tailwind.",
+    project1Stat1: "Uptime",
+    project1Stat2: "Load Time", 
+    project1Stat3: "Users",
+    
+    project2Title: "Youtube kloon",
+    project2Description: "Youtube kloon, mis sai tehtud kasutades Reacti ja juurde on lisatud erinevad funktsioonid.",
+    project2Stat1: "Rating",
+    project2Stat2: "Downloads",
+    project2Stat3: "Platforms",
+    
+    // Other Projects Data
+    otherProject1Title: "Myhome kinnisvara leht",
+    otherProject1Description: "Wordpress põhine veebileht, kus on custom-teema ja erinevad pluginad, ning API ühendus Scoroga.",
+    
+    otherProject2Title: "3D portfoolio projekt", 
+    otherProject2Description: "Kursuse raames tehtud portfoolio leht, mis kasutab Three.js and Reacti.",
+    
+    otherProject3Title: "Ürituste loomise ja kuvamise plugin",
+    otherProject3Description: "Custom made plugin kliendi vajaduste põhiselt.",
     
     // Contact Section
     workTogether: "Teeme Koostööd",
