@@ -97,13 +97,13 @@ export const translations = {
 
     // Featured Projects Data
     project1Title: "Portfolio Website",
-    project1Description: "A portfolio website with a little bit of everything - Three.js, React, Tailwind.",
+    project1Description: "A portfolio website with a little bit of everything - Three.js, React, Tailwind. A website that showcases my skills and experience. Personal project to practice and work with React projects.",
     project1Stat1: "Uptime",
     project1Stat2: "Load Time", 
     project1Stat3: "Users",
     
     project2Title: "Youtube clone",
-    project2Description: "Youtube clone with Db and Firebase authentication. Part of a code along video, but with some minor changes.",
+    project2Description: "Youtube clone with Db and Firebase authentication. Part of a code along video, but with some minor changes. Helped me understand the backend of authentication and logic.",
     project2Stat1: "Rating",
     project2Stat2: "Downloads",
     project2Stat3: "Platforms",
@@ -194,7 +194,7 @@ export const translations = {
   },
   et: {
     // Navigation
-    home: "Kodu",
+    home: "Esileht",
     about: "Meist",
     experience: "Kogemus",
     projects: "Projektid",
@@ -327,13 +327,13 @@ export const translations = {
 
     // Featured Projects Data
     project1Title: "Personaalne portfoolio leht",
-    project1Description: "Portfoolio leht, kus on natukene kõike - Three.js, React, Tailwind.",
+    project1Description: "Portfoolio leht, kus on natukene kõike - Three.js, React, Tailwind. Personaalne projekt et meelde tuletada Reacti ja sellega uuesti töötada.",
     project1Stat1: "Uptime",
     project1Stat2: "Load Time", 
     project1Stat3: "Users",
     
     project2Title: "Youtube kloon",
-    project2Description: "Youtube kloon, mis sai tehtud kasutades Reacti ja juurde on lisatud erinevad funktsioonid.",
+    project2Description: "Youtube kloon, mis sai tehtud kasutades Reacti ja juurde on lisatud erinevad funktsioonid. Aitas mõista rohkem backendi ja autentimist.",
     project2Stat1: "Rating",
     project2Stat2: "Downloads",
     project2Stat3: "Platforms",

@@ -19,22 +19,12 @@ export function ProjectsSection() {
       description: t('project1Description'),
       image: portfolio,
       technologies: ["React", "Three.js", "EmailJS", "TailwindCss"],
-      stats: { 
-        [t('project1Stat1')]: "99%", 
-        [t('project1Stat2')]: "2.3s", 
-        [t('project1Stat3')]: "50k+" 
-      }
     },
     {
       title: t('project2Title'),
       description: t('project2Description'),
       image: youtube,
       technologies: ["React", "Node.js", "MongoDB", "Firebase"],
-      stats: { 
-        [t('project2Stat1')]: "4.8★", 
-        [t('project2Stat2')]: "100k+", 
-        [t('project2Stat3')]: "iOS & Android" 
-      }
     }
   ];
 
@@ -107,14 +97,7 @@ export function ProjectsSection() {
                   ))}
                 </div>
 
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  {Object.entries(project.stats).map(([key, value], statIndex) => (
-                    <div key={statIndex}>
-                      <div className="text-2xl font-bold text-primary">{value}</div>
-                      <div className="text-xs text-muted-foreground capitalize">{key}</div>
-                    </div>
-                  ))}
-                </div>
+                
               </div>
             </div>
           ))}

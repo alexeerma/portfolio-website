@@ -144,7 +144,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-foreground dark:text-accent">{t('email')}</div>
-                    <div className="text-muted-foreground">aleksander.eerma@hotmail.com</div>
+                    <div className="text-muted-foreground">aleksander.eerma@gmail.com</div>
                   </div>
                 </div>
 
@@ -270,10 +270,11 @@ export function ContactSection() {
                   value={formData.budgetRange}
                   placeholder={t('selectBudget')}
                   options={[
-                    { value: "5k-10k", label: "€5,000 - €10,000" },
-                    { value: "10k-25k", label: "€10,000 - €25,000" },
-                    { value: "25k-50k", label: "€25,000 - €50,000" },
-                    { value: "50k+", label: "€50,000+" }
+                    { value: "0,5k-1k", label: "€500 - €1000" },
+                    { value: "1,1k-2k", label: "€1100 - €2000" },
+                    { value: "3k-5k", label: "€3000 - €5000" },
+                    { value: "6k-10k", label: "€6000 - €10000" },
+                    { value: "10k+", label: "€10,000+" }
                   ]}
                   onValueChange={(value) => handleInputChange('budgetRange', value)}
                   className="mt-2"
